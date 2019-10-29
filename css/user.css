@@ -125,7 +125,7 @@ overflow: hidden;
 
 
 /* main */
-.search {
+/* .search {
   position: relative;
   width: 300px;
 }
@@ -201,9 +201,49 @@ overflow: hidden;
 .search:not(.active) .overlay-2,
 .search:not(.searching) .overlay-2 {
   visibility: hidden;
-}
+} */
 
+  /* search */
+  form{
+    display: flex;
+  justify-content: center;
+    padding: 20px 0 0 10px;
+  }
 
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 70%;
+    background: #f1f1f1;
+    border-radius: 20px 0 0 20px;
+  }
+  
+  form.example button {
+    float: left;
+    width: 10%;
+    padding: 10px;
+    background: #39925D;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+  }
+  
+  form.example button:hover {
+    background: rgb(27, 90, 52);
+  }
+  
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  
 
  /* #wrap {
     margin: 10px 30px;
@@ -271,72 +311,108 @@ overflow: hidden;
 
 
   /* card */
-  /* Lazy Load Styles */
-.card-image {
-	display: block;
-	min-height: 20rem; /* layout hack */
-	background: #fff center center no-repeat;
-	background-size: cover;
-	filter: blur(3px); /* blur the lowres image */
-}
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.card-image > img {
-	display: block;
-	width: 100%;
-	opacity: 0; /* visually hide the img element */
-}
+  .card{
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 30.90909090909091%;
+    height: auto;
+    position: relative;
+    margin: 3% 2% 5% 0;
+  }
 
-.card-image.is-loaded {
-	filter: none; /* remove the blur on fullres image */
-	transition: filter 1s;
-}
+  .image img{
+    width: 100%;
+  }
 
+  .title{
+    text-align: center;
+  }
 
+  .des{
+    text-align: center;
+    padding-bottom: 20px;
+  }
 
+  .details{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "judul judul"
+    "investasi kuota"
+    "return tombol";
+    align-items: center;
+    padding: 2.941176470588235% 5.882352941176471% 4.117647058823529% 5.882352941176471%;
+  }
 
-/* Layout Styles */
+  .title{
+    grid-area: judul;
+    font-family: "lato-bold", Helvetica, Arial, sans-serif;
+    font-size: 16px!important;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 28px;
+    text-align: left;
+  }
 
-.card-list {
-	display: block;
-	margin: 1rem auto;
-  padding-left: 30px;
-  padding-right: 20px;
-	font-size: 0;
-	text-align: left;
-	list-style: none;
-}
+  .title a{
+    text-decoration: none;
+    color: #666464;
+  }
 
-.card {
-	display: inline-block;
-  width: 70%;
-	max-width: 20rem;
-	margin: 80px 20px; 
-	font-size: 1rem;
-	text-decoration: none;
-	overflow: hidden;
-	box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
-	transition: transform 0.1s ease-in-out, box-shadow 0.1s;
-}
+  .des_invest{
+    grid-area: investasi;
+    color: #9d9d9d;
+  }
 
-.card:hover {
-	transform: translateY(-0.5rem) scale(1.0125);
-	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
-}
+  .des_kuota{
+    grid-area: kuota;
+    color: #666464;
+    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 26px;
+    font-weight: normal;
+  }
 
-.card-description {
-	display: block;
-	padding: 1em 0.5em;
-	color: #515151;
-	text-decoration: none;
-}
+  .des_kuota span{
+    font-size: 30px;
+  }
 
-.card-description > h2 {
-	margin: 0 0 0.5em;
-}
+  .des_return{
+    grid-area: return;
+    color: #9d9d9d;
+  }
 
-.card-description > p {
-	margin: 0;
-}
+  .more{
+    grid-area: tombol;
+    font-size: 50px;
+    text-decoration: none;
+    padding: 10px 15px;
+    /* border: 2px solid #bfd9f1; */
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -o-border-radius: 30px;
+    color: #fff;
+    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    background: #E0BC24;
+  }
+
+  .more a{
+    text-decoration: none;
+    color: #fff;
+  }
 
 /* footer */
 .admin__footer > ul{

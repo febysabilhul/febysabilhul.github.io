@@ -587,7 +587,7 @@ border-bottom-left-radius: 30px;
 }
 
 .item2{
-    grid: investasi;
+    grid-area: investasi;
 }
 
 .item2_2{
@@ -604,11 +604,11 @@ border-bottom-left-radius: 30px;
 }
 
 .item3{
-    grid: return;
+    grid-area: return;
 }
 
 .item3_2 a{
-    grid: tombol;
+    grid-area: tombol;
     font-size: 50px;
     text-decoration: none;
     padding: 10px 15px;
@@ -1312,7 +1312,7 @@ img{
 
 }
 .art2 h2{
-    color: black
+    color: black;
     font-family: "p22_corinthia", Helvetica, Arial, sans-serif;
     font-size: 35px;
     vertical-align: text-top;
@@ -1331,7 +1331,7 @@ margin: 25px 1px;
 }
 .page h2{
     text-align: center;
-    color: black
+    color: black;
     font-family: "p22_corinthia", Helvetica, Arial, sans-serif;
     font-size: 35px;
     vertical-align: text-top;
