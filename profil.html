@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agrivest</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/user.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div class="admin">
+			<header class="admin_header">
+				<!-- <!-- <a href="contact.asp">Logout</a> -->
+				<a href="about.asp">Hallo Admin</a> -->
+			</header>
+		
+		<nav class="admin_nav">
+			<div class="wrapper-inner-tab-backgrounds">
+                <br>
+				<div class="wrapper-inner-tab-backgrounds-first"><div class="sim-button button1"><span>Project</span></div></div>
+				<div class="wrapper-inner-tab-backgrounds-second"><div class="sim-button button1"><span>Artikel</span></div></div>
+				<div class="wrapper-inner-tab-backgrounds-third"><div class="sim-button button1"><span>Profil</span></div></div>
+                <div class="wrapper-inner-tab-backgrounds-third"><div class="sim-button button1"><span>Logout</span></div></div>
+            <p></p>
+            
+      
+				</div>
+		</nav>
+
+		<main class="admin__main">
+
+            <div class="article-dataprofil">
+                <img id="image_upload_preview" src="img/pic1.png" alt="your image  / style="width: 250px;" >
+                <p style="text-align:left;"> Ganti poto profil</p>
+                <br>
+                <input type="file" name="psw" required id="inputFile"> 
+          <br><br>
+                <p style="text-align:left;"> Nama Lengkap &nbsp&nbsp&nbsp&nbsp&nbsp : Suparman </p>
+                <br>
+                <p style="text-align:left;"> Tempat tanggal lahir &nbsp : Jember, 01 Januari 1998</p>
+                <br>
+                <p style="text-align:left;"> Alamat &nbsp&nbsp&nbsp&nbsp&nbsp : Halmahera 2 no.15 </p>
+                <br>
+                <p style="text-align:left;">No. Hp &nbsp : 082338012135</p>
+                <br>
+                <p style="text-align:left;"> Email &nbsp&nbsp&nbsp&nbsp&nbsp : febysabilhul@gmail.com </p>
+         <br>
+
+            </div>
+			 <!-- <div id="wrap">
+				<form action="" autocomplete="on">
+				<input id="search" name="search" type="text" placeholder="What're we looking for ?"><input id="search_submit" value="Rechercher" type="submit">
+				</form>
+			  </div>  -->
+
+		</main>
+		<footer class="admin__footer">
+		  <p>
+			&copy; 2019 Agrivest
+		  </p>
+		</footer>
+	  </div>
+
+      <script type="text/javascript" src="js/main.js"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="javascript.js"></script>
+	
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#image_upload_preview').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#inputFile").change(function () {
+    readURL(this);
+});
+</script>
+</html>
