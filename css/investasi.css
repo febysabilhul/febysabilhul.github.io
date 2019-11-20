@@ -388,10 +388,11 @@ nav {
   width: 320px;
   /* top: 50%;
   left: 50%; */
-  background: #f1f1f1;
+  background: #27814C;
   overflow: hidden;
   box-shadow: 0px 0px 20px #000000b3;
   margin: 50px 20px;
+  border-radius: 15px;
 }
 
 .card-header{

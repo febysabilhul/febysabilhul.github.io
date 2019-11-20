@@ -41,3 +41,38 @@ $('.cf a').on('click', function(event) {
     );
   }
 });
+
+
+// Dropdown
+$(document).ready(function() {
+  // on click on  setting button
+  $(".dropdown .button").click(function() {
+      var val = $(this).attr('id');
+      if (val == 1) {
+          $(".dropdown ul").hide();
+          $(this).attr('id', '0');
+      } else {
+          $(".dropdown ul").show();
+          $(this).attr('id', '1');
+      }
+
+  });
+
+  //Mouse click on setting button and ul list
+  $(".dropdown ul, .button").mouseup(function() {
+      return false;
+  });
+
+  //Document Click
+  $(document).mouseup(function() {
+      $(".dropdown ul").hide();
+      $(".dropdown .button").attr('id', '0');
+  });
+
+
+  $('.sidebar ul li').on('click', function(){
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+  })
+});
+
