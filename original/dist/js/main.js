@@ -74,5 +74,18 @@ $(document).ready(function() {
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
   })
+
+  //Tab
+  jQuery('.tabs .tab-links a').on('click', function(e) {
+		var currentAttrValue = jQuery(this).attr('href');
+
+		// Show/Hide Tabs
+		jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+
+		// Change/remove current tab to active
+		jQuery(this).parent('li').addClass('active-tab').siblings().removeClass('active-tab');
+
+		e.preventDefault();
+	});
 });
 
