@@ -59,10 +59,54 @@
                      <input class="file-upload" type="file" accept="image/*"/>
                   </div>
                 </div>
-              
+                
+                <div id="page-wrap">
+                  <ul class="group" id="nav">
+                    <li><a href="informasi_pribadi">Informasi Pribadi</a></li>
+                    <li><a href="b">B</a></li>
+                    <li><a href="c">C</a></li>
+                  </ul>
+                </div>
                 </div>
                 <div class="detail-user">
-                    <h3>Informasi Pribadi</h3>
+                  <section id="main-content">
+                    <div class="con-det-user">
+                        <h3>Informasi Pribadi</h3>
+                      <form action="/action_page.php">
+                        <label for="fname">Nama (Sesuai KTP)</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    
+                        <label for="lname">Tempat Lahir</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                        <label for="lname">Tanggal Lahir</label>
+                        <input type="date" id="lname" name="lastname" placeholder="Your last name..">
+
+                        <label for="lname">Jenis Kelamin</label>
+                        <select id="j_kelamin" name="country">
+                            <option value="australia">Laki-laki</option>
+                            <option value="canada">Perempuan</option>
+                          </select>
+
+                          <label for="lname">Status Perkawinan</label>
+                          <select id="s_kawin" name="country">
+                              <option value="australia">Belum Nikah</option>
+                              <option value="canada">Sudah Nikah</option>
+                            </select>
+
+                            <label for="lname">Agama</label>
+                            <select required="" id="id_agama" class="browser-default"><option value="" disabled="">-- Silakan Pilih --</option><option value="1">Islam</option><option value="2">Katolik</option><option value="3">Protestan</option><option value="4">Hindu </option><option value="5">Budha</option><option value="6">Konghucu</option><option value="7">Lain-lain</option></select>
+
+                            <label for="">Pendidikan Terakhir</label>
+                            <select required="" id="id_education" class="browser-default"><option value="" disabled="">-- Silakan Pilih --</option><option value="1">SD</option><option value="2">SMP</option><option value="3">SMA /  Sederajat</option><option value="4">Akademi / Diploma</option><option value="5">S1</option><option value="6">S2</option><option value="7">S3</option></select>
+                          
+                        <label for="lname">Nama Ibu Kandung</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    
+                        <input type="submit" value="Submit">
+                      </form>
+                    </div>
+                  </section>
                   </div>
               </div>
 

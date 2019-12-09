@@ -109,6 +109,15 @@ $(".file-upload").on('change', function(){
 $(".upload-button").on('click', function() {
    $(".file-upload").click();
 });
+
+$('#main-content').load('informasi_pribadi.html');
+
+$('ul#nav li a').click(function(){
+  var page = $(this).attr('href')
+  $('#main-content').load(page + '.html');
+  return false;
+})
+
 });
 
 

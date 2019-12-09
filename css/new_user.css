@@ -1123,6 +1123,14 @@ li.active-tab a, li.active-tab a:hover {
   margin: 0px auto;
 }
 
+.left-pro{
+  height: 450px;
+}
+
+.left-pro ul li{
+  list-style: none;
+}
+
 .file-upload {
   display: none;
 }
@@ -1163,3 +1171,106 @@ color: #999;
   font-size: 30px;
 }
 
+.detail-user{
+  height: 100%;
+}
+
+.con-det-user{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.con-det-user h3, .con-det-user label{
+  color: #333;
+} 
+
+.con-det-user input[type=text], .con-det-user input[type=date], .con-det-user select{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Modal */
+.modal {
+  background-color: rgba(0, 0, 0, .8);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  visibility: hidden;
+  transition: all .5s;
+}
+
+.modal-content{
+  position: absolute;
+  background-color: #fff;
+  top: 25%;
+  left: 50%;
+  visibility: hidden;
+  transition: all .5s;
+  width: 30%;
+  height: 18%;
+  border-radius: 10px;
+}
+
+.modal-content input{
+  display: block;
+}
+
+.modal-content h3{
+  color: #333;
+}
+
+.wrap-modal{
+  width: 80%;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.btn_modal{
+display: inline-block;
+float: right;
+}
+
+.yes{
+  margin: 10px 0 0 0;
+padding: 5px;
+border-radius: 10px;
+  background-color:#27814C;
+  color:#fff;
+}
+
+.no{
+  margin: 10px 0 0 0;
+padding: 5px;
+border-radius: 10px;
+  background-color:#b90415;
+  color:#fff;
+}
+
+.modal-content a:link, .modal-content a:visited{
+  text-decoration: none;
+}
+
+.modal-close{
+  position: absolute;
+  right: 12px;
+  top: 3px;
+  font-size: 30px;
+}
+
+#modal:target{
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal:target .modal-content{
+  opacity: 1;
+  visibility: visible;
+}
