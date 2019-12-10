@@ -1184,7 +1184,7 @@ color: #999;
   color: #333;
 } 
 
-.con-det-user input[type=text], .con-det-user input[type=date], .con-det-user select{
+.con-det-user input[type=text], .con-det-user input[type=date], .con-det-user select, .con-det-user input[type=number]{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -1192,6 +1192,28 @@ color: #999;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 49%;
+  margin: 0 5px 0 0;
+  justify-content: flex-end;
+}
+
+.dob-column{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  flex: 2;
 }
 
 /* Modal */
