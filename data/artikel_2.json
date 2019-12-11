@@ -1,0 +1,27 @@
+
+[
+	{
+		"gambar"	:"img/2.jpg",
+		"judul"	:"Rute terbaik",
+		"paragraf":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, pariatur! Cum perspiciatis aperiam praesentium cumque cupiditate id rerum ipsa soluta blanditiis pariatur, exercitationem, nam saepe rem a ipsum obcaecati quidem!"	
+	},
+	
+	{
+		"gambar"	:"img/2.jpg",
+		"judul"	:"Rute terbaik",
+		"paragraf":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, pariatur! Cum perspiciatis aperiam praesentium cumque cupiditate id rerum ipsa soluta blanditiis pariatur, exercitationem, nam saepe rem a ipsum obcaecati quidem!"	
+	},
+	
+	{
+		"gambar"	:"img/2.jpg",
+		"judul"	:"Rute terbaik",
+		"paragraf":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, pariatur! Cum perspiciatis aperiam praesentium cumque cupiditate id rerum ipsa soluta blanditiis pariatur, exercitationem, nam saepe rem a ipsum obcaecati quidem!"	
+	},
+	
+	{
+		"gambar"	:"img/2.jpg",
+		"judul"	:"Rute terbaik",
+		"paragraf":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, pariatur! Cum perspiciatis aperiam praesentium cumque cupiditate id rerum ipsa soluta blanditiis pariatur, exercitationem, nam saepe rem a ipsum obcaecati quidem!"	
+	}
+
+]
