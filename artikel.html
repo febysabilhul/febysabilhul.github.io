@@ -40,41 +40,50 @@
                     <h1>Artikel</h1>
                 </div>
               </div>
-          
-        <div class="wrapper-article article_content">
+
+        <div class="wrapper-article article_content" >
 
           <!-- Content -->
+          <div id="list_artikel" page="">
 					<div id="content" class="8u skel-cell-important">
-						<div class="item">
-              <a href="#" class="image full"><img src="img/2.jpg" alt="" /></a>
-              <header>
-								<h2>Welcome to Iridium!</h2>
-							</header>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis asperiores, reiciendis voluptatem unde, maiores praesentium hic ducimus excepturi repellendus ex eaque! Voluptatem autem necessitatibus fugit perferendis nostrum magnam vero?</p>
-              <a href="#" class="button_content big special">Read More</a>
-              <hr class="line">
+              <div class="item">
+               z`"><img src="img/2.jpg" alt="" /></a>
+                <header>
+                  <h2>Welcome to Iridium!</h2>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis asperiores, reiciendis voluptatem unde, maiores praesentium hic ducimus excepturi repellendus ex eaque! Voluptatem autem necessitatibus fugit perferendis nostrum magnam vero?</p>
+                <a href="#" class="button_content big special">Read More</a>
+                <hr class="line">
+              </div>
+              
+              <div class="item">
+                <a href="#" class="image full"><img src="img/1.jpg" alt="" /></a>
+                <header>
+                  <h2>Welcome to Iridium!</h2>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis asperiores, reiciendis voluptatem unde, maiores praesentium hic ducimus excepturi repellendus ex eaque! Voluptatem autem necessitatibus fugit perferendis nostrum magnam vero?</p>
+                <a href="#" class="button_content big special">Read More</a>
+                <hr class="line">
+              </div>
+              
+              <div class="item">
+                <a href="#" class="image full"><img src="img/3.jpg" alt="" /></a>
+                <header>
+                  <h2>Welcome to Iridium!</h2>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis asperiores, reiciendis voluptatem unde, maiores praesentium hic ducimus excepturi repellendus ex eaque! Voluptatem autem necessitatibus fugit perferendis nostrum magnam vero?</p>
+                <a href="#" class="button_content big special">Read More</a>
+                <BR>
+             
+                  <div id="load_more">
+                      <a class="button big special" id="load_btn">More</a>
+                    </div>
+
+                <hr class="line">
+              </div>
             </div>
-            
-            <section class="item">
-              <a href="#" class="image full"><img src="img/1.jpg" alt="" /></a>
-              <header>
-								<h2>Welcome to Iridium!</h2>
-							</header>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis asperiores, reiciendis voluptatem unde, maiores praesentium hic ducimus excepturi repellendus ex eaque! Voluptatem autem necessitatibus fugit perferendis nostrum magnam vero?</p>
-              <a href="#" class="button_content big special">Read More</a>
-              <hr class="line">
-            </section>
-            
-            <section class="item">
-              <a href="#" class="image full"><img src="img/3.jpg" alt="" /></a>
-              <header>
-								<h2>Welcome to Iridium!</h2>
-							</header>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis asperiores, reiciendis voluptatem unde, maiores praesentium hic ducimus excepturi repellendus ex eaque! Voluptatem autem necessitatibus fugit perferendis nostrum magnam vero?</p>
-              <a href="#" class="button_content big special">Read More</a>
-              <hr class="line">
-						</section>
-          </div>
+            </div>
+           
           
           <!-- Sidebar -->
 					<div id="sidebar" class="4u">
@@ -104,10 +113,12 @@
 								</li>
 							</ul>
 						</section>
-					</div>
+
+					</div> 
 
         </div>
-
+ 
+       
         <!-- Footer -->
   <footer>
     <div class="container">
@@ -129,6 +140,63 @@
       Copyright &copy; 2019 Agrivest
     </div>
   </footer>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript">
+		$("#load_btn").click(function(event) {
+			var hal = $("#list_artikel").attr('page');
+			hal = Number(hal);
+			if (hal == "") {
+				hal = 2;
+			}
+			else{
+				hal += 1;
+			}
+
+			$("#list_artikel").attr('page', hal);
+			if (hal == 2) {
+				$("#load_btn").hide();
+			}
+
+			var path = "data/artikel_"+hal+".json";
+
+			$.ajax({
+				url: path,
+				type: 'GET',
+				dataType: 'json',
+				// data: { }
+			})
+			.done(function(hasil) {
+				console.log("success");
+				var gabung = "";
+				$.each(hasil, function(index, val) {
+           gabung += ` 
+           <div id="content" class="8u skel-cell-important">
+                <div class="item">
+                <img src=`+val.gambar+` alt="" >
+                <header>
+                  <h2>`+val.judul+`</h2>
+                </header>
+                <p>`+val.paragraf+`</p>
+                <a href="#" class="button_content big special">Read More</a>
+                <hr class="line">
+              </div>
+              </div>
+					 `;
+				});
+
+				$("#list_artikel").append(gabung);
+			})
+			.fail(function() {
+				console.log("error");
+			});
+			
+		});
+
+		filter_les();
+		cariVideo();
+	</script>
         
 
 <!-- 

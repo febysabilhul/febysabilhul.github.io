@@ -335,7 +335,11 @@ nav {
 	{
 		font-size: 1.40em;
 	}
-	
+  
+  a:hover{
+    cursor: pointer;
+  }
+
 	#sidebar h2
 	{
 		display: block;

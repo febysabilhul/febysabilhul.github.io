@@ -1,91 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Agrivest</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/user.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcun icon" type="image/ico" href="favicon.ico">
+    <link rel="stylesheet" href="./css/new admin.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+    <title>Dashboard</title>
+    <style type="text/css">
+      .main-body{
+        display: table;
+        width: 100%;
+      }
+  
+      .wrapper{
+        padding: 10px;
+      }
+  
+      /*#form_wrap{
+        width: 100%;
+        margin-top: 25px;
+      }*/
+  
+      #form_wrap {
+        width: 70%;
+        margin: auto;
+        padding: 20px;
+        overflow: hidden;
+        background-color: rgba(245, 245, 245, 0.6);
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.3);
+      }
+  
+      #table_profile{
+        width: 100%;
+        margin-top: 10px;
+      }
+  
+      #table_profile td{
+        padding: 10px;
+      }
+  
+      #btn_submit{
+        float: right;
+        margin-top: 10px;
+      }
+  
+      #avatar_wrap{
+        height: 110px;
+        width: 110px;
+      }
+  
+      #avatar_wrap img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+  
+      #table-form{
+        width: 100%;
+        color: black;
+      }
+  
+      #table-form td{
+        padding: 5px;
+      }
+  
+      #table-form tr td:first-child{
+        width: 10%;
+      }
+  
+      #table-form tr td:nth-child(2){
+        padding: 0;
+        margin: 0;
+      }
+  
+      .input_form, #table-form td select{
+        padding: 5px;
+        width: 100%;
+        border: none;
+        background-color: #ddd;
+        font-size: 16px;
+      }
+  
+      .radio_label{
+        cursor: pointer;
+        margin-right: 25px;
+        background-color: red;
+      }
+  
+      .input_gender{
+        cursor: pointer;
+      }
+  
+      .input_gender input{
+        padding: 0;
+        width: initial;
+      }
+  
+      #file_info{
+        margin-left: 15px;
+        font-size: 14px;
+      }
+  
+      #upload_btn{
+        margin-top: 20px;
+      }
+  
+      @media only screen and (max-width: 800px){
+        #form_wrap{
+          width: 90%;
+        }
+      }
+  
+      @media only screen and (max-width: 600px){
+        #upload_btn{
+          margin-left: 0px;
+          margin-top: 10px;
+        }
+  
+        #file_info{
+          margin-left: 0;
+        }
+      }
+  
+    </style>
 </head>
 <body>
+  
+        <header>
+            <nav class='cf'>
+                <ul>
+                  <li class="hide-on-small">
+                    <a href="home_user.html">Agrivest</a>
+                  </li>
+                  <li>
+                    <a href='#showcase'>Home</a>
+                  </li>
+                  <li>
+                    <a href='#music'>Investasi</a>
+                  </li>
+                  <li>
+                    <a href='#video'>Artikel</a>
+                  </li>
+           
+                </ul>
+                <div  class="dropdown"> 
+                  <div class="button"><img class="right" src="/img/3.jpg" alt=""></div>            
+                     <ul>
+                    <li><a href="dashboard_user.html">Dashboard</a></li>
+                    <li><a href="#Manage Pages">Profile</a></li>
+                    <li><a href="index.html">Sign Out</a></li>
+                     </ul> 
+                  </div> 
+                <a href='#' id='openup'>Agrivest</a>
+            </nav>
+        </header>
+        <div class="wrap-dash">
+          <div class="content">
+              <div class="sidebar">
+                  <ul>
+                      <li><a href="">Dashboard</a></li>
+                      <li><a href="investasi_user.html">Investasi</a></li>
+                      <li><a href="">Transaksi</a></li>
+                      <li class="active"><a href="dashboard_user.html">Profil</a></li>
+                  </ul>
+              </div>
+  
 
-	<div class="admin">
-			<header class="admin_header">
-				<!-- <!-- <a href="contact.asp">Logout</a> -->
-				<a href="about.asp">Hallo Admin</a> -->
-			</header>
-		
-		<nav class="admin_nav">
-			<div class="wrapper-inner-tab-backgrounds">
-                <br>
-				<div class="wrapper-inner-tab-backgrounds-first"><div class="sim-button button1"><span>Project</span></div></div>
-				<div class="wrapper-inner-tab-backgrounds-second"><div class="sim-button button1"><span>Artikel</span></div></div>
-				<div class="wrapper-inner-tab-backgrounds-third"><div class="sim-button button1"><span>Profil</span></div></div>
-                <div class="wrapper-inner-tab-backgrounds-third"><div class="sim-button button1"><span>Logout</span></div></div>
-            <p></p>
-            
-      
-				</div>
-		</nav>
+        <div class="wrap-dash">
+        <div class="content">
+           
 
-		<main class="admin__main">
+            <div class="main-dash">
+                <!-- <h2>Investasi</h2> -->
+                  <div class="dbottom">
+                    <div class="tabs">
+                      <ul class="tab-links">
+                        <li class="active-tab"><a href="#tab1">Profil</a></li>
+                        <!-- <li><a href="#tab2">Selesai</a></li> -->
+                      </ul>
 
-            <div class="article-dataprofil">
-                <img id="image_upload_preview" src="img/pic1.png" alt="your image  / style="width: 250px;" >
-                <p style="text-align:left;"> Ganti poto profil</p>
-                <br>
-                <input type="file" name="psw" required id="inputFile"> 
-          <br><br>
-                <p style="text-align:left;"> Nama Lengkap &nbsp&nbsp&nbsp&nbsp&nbsp : Suparman </p>
-                <br>
-                <p style="text-align:left;"> Tempat tanggal lahir &nbsp : Jember, 01 Januari 1998</p>
-                <br>
-                <p style="text-align:left;"> Alamat &nbsp&nbsp&nbsp&nbsp&nbsp : Halmahera 2 no.15 </p>
-                <br>
-                <p style="text-align:left;">No. Hp &nbsp : 082338012135</p>
-                <br>
-                <p style="text-align:left;"> Email &nbsp&nbsp&nbsp&nbsp&nbsp : febysabilhul@gmail.com </p>
-         <br>
-
+                      <!-- <div class="tab-content"> -->
+                        <!-- <div id="tab1" class="tab active-tab"> -->
+                          <!-- <div id="tab1" class="tab active-tab"> -->
+                            <div class="card-dashh">
+                                <!-- <div class="card-headerr"> -->
+                                  <img class="class-dashh_image" id="avatar_user" src="/img/emot_file.jpg" alt="your image">                              
+                            </div>
+                                  <div class="card-dash_text">
+                                    <table>
+                                        <tr>
+                                          <td>Nama</td>
+                                          <td>:</td>
+                                          <td id="nama_user">User</td>
+                                          
+                                        </tr>
+                 
+                                        <tr>
+                                          <td>Email</td>
+                                          <td>:</td>
+                                          <td id="email_user">user@email.com</td>
+                                        </tr>
+                        
+                                        <tr>
+                                          <td>Nomor HP</td>
+                                          <td>:</td>
+                                          <td id="noHP_user">08974345678</td>
+                                        </tr>
+                        
+                                        <tr>
+                                          <td>Jenis Kelamin</td>
+                                          <td>:</td>
+                                          <td id="gender_user">Laki-laki</td>
+                                        </tr>
+                        
+                                        <tr>
+                                          <td>Jenjang</td>
+                                          <td>:</td>
+                                          <td id="jenjang_user">SMP Kelas 8</td>
+                                        </tr>
+                                      </table>
+                                      <button class="btn btn_utama" type="button" id="btn_ubah">Ubah Profil</button>
+                                </div>
+                                </div>
+                              </div>
+                             
+                            <!-- </div>
+                        </div>
+                      
+                    </div>
+                 
+                    </div> -->
+                  </div>
+                </div>
             </div>
-			 <!-- <div id="wrap">
-				<form action="" autocomplete="on">
-				<input id="search" name="search" type="text" placeholder="What're we looking for ?"><input id="search_submit" value="Rechercher" type="submit">
-				</form>
-			  </div>  -->
+            
+  
+            <div class="modal" id="id_modal">
+              <form action="#" class="modal-content">
+                <div class="modal-top">
+                  <span class="modal-close"><i class="fa fa-times"></i></span>
+                  <h3>Ubah Data Profile</h3>
+                </div>
+  
+                <div class="modal-middle">
+                  <div id="upload_avatar" class="baris">
+                    <div id="avatar_wrap" class="kol-m-4">
+                      <img id="avatar_img" src="/img/emot_file.jpg">
+                    </div>
+  
+                    <div id="file_info" class="kol-m-7">
+                      
+                    </div>	
+                  </div>
+  
+                  <div id="upload_btn">
+                    <label for="btn_file" class="uploadIcon">Choose File</label>
+                    <input type="file" name="avatar" id="btn_file" value="Choose File" accept="image/*">
+                  </div>
+                  
+                  <table id="table-form">
+                    <tr>
+                      <td>Nama</td>
+                      <td>:</td>
+                      <td>
+                        <input type="text" name="nama" class="input_form" value="User">
+                      </td>
+                    </tr>
+  
+                    <tr>
+                      <td>Email</td>
+                      <td>:</td>
+                      <td>
+                        <input type="email" name="email" class="input_form" value="user@emails.com">
+                      </td>
+                    </tr>
+  
+                    <tr>
+                      <td>Nomor HP</td>
+                      <td>:</td>
+                      <td>
+                        <input type="text" name="no_hp" min="1" class="input_form" value="08974345678">
+                      </td>
+                    </tr>
+  
+                    <tr>
+                      <td>Jenis Kelamin</td>
+                      <td>:</td>
+                      <td>
+                        <label class="input_gender">
+                          <input type="radio" name="gender" value="Laki-laki" checked="">Laki-laki
+                        </label>
+  
+                        <label class="input_gender">
+                          <input type="radio" name="gender" value="Perempuan">Perempuan
+                        </label>
+                      </td>
+                    </tr>
+  
+                    <tr>
+                      <td>Jenjang</td>
+                      <td>:</td>
+                      <td>
+                        <select name="kelas">
+                          <option value="">-- Pilih Kelas --</option>
+                          <option value="SD Kelas 4">SD Kelas 4</option>
+                          <option value="SD Kelas 5">SD Kelas 5</option>
+                          <option value="SD Kelas 6">SD Kelas 6</option>
+                          <option value="SMP Kelas 7">SMP Kelas 7</option>
+                          <option selected="" value="SMP Kelas 8">SMP Kelas 8</option>
+                          <option value="SMP Kelas 9">SMP Kelas 9</option>
+                          <option value="SMA Kelas 10 IPA">SMA Kelas 10 IPA</option>
+                          <option value="SMA Kelas 10 IPS">SMA Kelas 10 IPS</option>
+                          <option value="SMA Kelas 11 IPA">SMA Kelas 11 IPA</option>
+                          <option value="SMA Kelas 11 IPS">SMA Kelas 11 IPS</option>
+                          <option value="SMA Kelas 12 IPA">SMA Kelas 12 IPA</option>
+                          <option value="SMA Kelas 12 IPS">SMA Kelas 12 IPS</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+  
+                <div class="modal-bottom">
+                  <div id="btn_submit">
+                    <button class="btn btn_sukses" type="button" id="btn_update">Update</button>
+                  </div>	
+                </div>
+              </form>
+            </div>
+  
+            <div class="error-modal" id="error_modal">
+              <div class="error-modal-content">
+                <div class="modal-top">
+                  <h3>Peringatan</h3>
+                </div>
+  
+                <div class="modal-middle">
+                  <b></b>
+                </div>
+  
+                <div class="modal-bottom">
+                  <button class="btn btn_utama" id="close_error_form">Close</button>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+     
 
-		</main>
-		<footer class="admin__footer">
-		  <p>
-			&copy; 2019 Agrivest
-		  </p>
-		</footer>
-	  </div>
-
-      <script type="text/javascript" src="js/main.js"></script>
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-      <script src="javascript.js"></script>
-	
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- <script src="./original/dist/js/jquery-1.12.0.min.js"></script> -->
+    <script src="js/main.js"></script>
+    
+    <script type="text/javascript">
+      $("#btn_ubah").click(function(event) {
+        modalShow();
+        
+        $(".modal-close").click(function(event) {
+          modalHide();
+        });
+  
+        window.onclick = function(event) {
+          var modal = document.getElementById('id_modal');
+          if(event.target == modal){
+            modalHide();
+          }
+        };
+        
+      });
+      
+      $("#btn_update").updateProfile();
+      $("#btn_file").uploadGambar();
+  
+    </script>
 </body>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>
-function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-            $('#image_upload_preview').attr('src', e.target.result);
-        }
-
-        reader.readAsDataURL(input.files[0]);
-    }
-}
-
-$("#inputFile").change(function () {
-    readURL(this);
-});
-</script>
 </html>
