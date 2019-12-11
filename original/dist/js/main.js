@@ -110,6 +110,8 @@ $(".upload-button").on('click', function() {
    $(".file-upload").click();
 });
 
+
+//Tab Informasi Pribadi
 $('#main-content').load('informasi_pribadi.html');
 
 $('ul#nav li a').click(function(){
@@ -119,5 +121,8 @@ $('ul#nav li a').click(function(){
 })
 
 });
+
+
+
 
 

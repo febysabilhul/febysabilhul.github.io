@@ -846,7 +846,7 @@ li.active-tab a, li.active-tab a:hover {
 }
 
 .line{
-  border-bottom: 1px solid #DDD;;
+  border-bottom: 1px solid #DDD;
 }
 
 .con-dok img{
@@ -1124,11 +1124,41 @@ li.active-tab a, li.active-tab a:hover {
 }
 
 .left-pro{
-  height: 450px;
+  height: 560px;
+  width: auto;
+}
+
+#page-wrap ul li a{
+  color: #333;
+  width: 100%;
+}
+
+#page-wrap ul li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+#page-wrap ul li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-profile {
+    display: block;
+    width: 100%;
+    height: 25px;
+    padding: 10px 0;
+    margin: 2px 0;
+    text-align: left;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
 }
 
 .left-pro ul li{
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .file-upload {
@@ -1216,6 +1246,18 @@ color: #999;
   flex: 2;
 }
 
+textarea{
+    width: 100%;
+    height: 100px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
 /* Modal */
 .modal {
   background-color: rgba(0, 0, 0, .8);
@@ -1296,3 +1338,32 @@ border-radius: 10px;
   opacity: 1;
   visibility: visible;
 }
+
+.line-menu{
+  border-bottom: 1px solid #555;
+  width: 400px;
+}
+
+/* Upload Form */
+#custom-button {
+  padding: 10px;
+  color: white;
+  background-color: #009578;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%;
+}
+
+#custom-button:hover {
+  background-color: #00b28f;
+}
+
+#custom-text {
+  margin-left: 10px;
+  font-family: sans-serif;
+  color: #aaa;
+}
+
+
+
