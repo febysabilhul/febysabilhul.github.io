@@ -41,3 +41,88 @@ $('.cf a').on('click', function(event) {
     );
   }
 });
+
+
+// Dropdown
+$(document).ready(function() {
+  // on click on  setting button
+  $(".dropdown .button").click(function() {
+      var val = $(this).attr('id');
+      if (val == 1) {
+          $(".dropdown ul").hide();
+          $(this).attr('id', '0');
+      } else {
+          $(".dropdown ul").show();
+          $(this).attr('id', '1');
+      }
+
+  });
+
+  //Mouse click on setting button and ul list
+  $(".dropdown ul, .button").mouseup(function() {
+      return false;
+  });
+
+  //Document Click
+  $(document).mouseup(function() {
+      $(".dropdown ul").hide();
+      $(".dropdown .button").attr('id', '0');
+  });
+
+
+  $('.sidebar ul li').on('click', function(){
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+  })
+
+  //Tab
+  jQuery('.tabs .tab-links a').on('click', function(e) {
+		var currentAttrValue = jQuery(this).attr('href');
+
+		// Show/Hide Tabs
+		jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+
+		// Change/remove current tab to active
+		jQuery(this).parent('li').addClass('active-tab').siblings().removeClass('active-tab');
+
+		e.preventDefault();
+  });
+  
+  // Upload Foto
+  var readURL = function(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('.profile-pic img').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+
+$(".file-upload").on('change', function(){
+    readURL(this);
+});
+
+$(".upload-button").on('click', function() {
+   $(".file-upload").click();
+});
+
+
+//Tab Informasi Pribadi
+$('#main-content').load('informasi_pribadi.html');
+
+$('ul#nav li a').click(function(){
+  var page = $(this).attr('href')
+  $('#main-content').load(page + '.html');
+  return false;
+})
+
+});
+
+
+
+
+
