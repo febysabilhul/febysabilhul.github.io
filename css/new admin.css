@@ -20,6 +20,12 @@ body {
 img {
   width: 100%;
 }
+input[type=checkbox] {
+  visibility: hidden;
+  &:checked + label:after {
+    opacity: 1;
+  }
+}   
 
 a {
   text-decoration: none;
@@ -763,6 +769,36 @@ li.active-tab a, li.active-tab a:hover {
   margin: 50px 20px;
   border-radius: 15px;
 }
+.card-dash2{
+  width: 320px;
+  /* top: 50%;
+  left: 50%; */
+  background: #27814C;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px #000000b3;
+  margin: -570px 400px;
+  border-radius: 15px;
+}
+.card-dash3{
+  width: 320px;
+  /* top: 50%;
+  left: 50%; */
+  background: #27814C;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px #000000b3;
+  margin: 50px 780px;
+  border-radius: 15px;
+}
+.card-dash4{
+  width: 320px;
+  /* top: 50%;
+  left: 50%; */
+  background: #27814C;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px #000000b3;
+  margin: -570px 1170px;
+  border-radius: 15px;
+}
 .card-dashh{
   width: 320px;
   /* top: 50%;
@@ -927,6 +963,73 @@ li.active-tab a, li.active-tab a:hover {
   border-radius: 10px;
   color: #fff;
 }
+
+
+.card-dash2_text{
+  color: #000000;
+  width: 320px;
+  /* top: 50%;
+  left: 50%; */
+  /* background: #27814C; */
+  /* overflow: hidden; */
+  /* box-shadow: 0px 0px 20px #000000b3; */
+  margin: -300px 450px;
+  /* border-radius: 15px; */
+  
+
+}
+.card-dash2_text button{
+  cursor: pointer;
+  /* margin: 20px 20px; */
+  padding: 10px;
+  background-color: #E0BC24;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.card-dash3_text{
+  color: #000000;
+  width: 320px;
+  /* top: 50%;
+  left: 50%; */
+  /* background: #27814C; */
+  /* overflow: hidden; */
+  /* box-shadow: 0px 0px 20px #000000b3; */
+  margin: -300px 450px;
+  /* border-radius: 15px; */
+  
+
+}
+.card-dash3_text button{
+  cursor: pointer;
+  /* margin: 20px 20px; */
+  padding: 10px;
+  background-color: #E0BC24;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.card-dash4_text{
+  color: #000000;
+  width: 320px;
+  /* top: 50%;
+  left: 50%; */
+  /* background: #27814C; */
+  /* overflow: hidden; */
+  /* box-shadow: 0px 0px 20px #000000b3; */
+  margin: -300px 450px;
+  /* border-radius: 15px; */
+  
+
+}
+.card-dash4_text button{
+  cursor: pointer;
+  /* margin: 20px 20px; */
+  padding: 10px;
+  background-color: #E0BC24;
+  border-radius: 10px;
+  color: #fff;
+}
 .card-header{
   height: 200px;
   overflow: hidden;
@@ -950,6 +1053,21 @@ li.active-tab a, li.active-tab a:hover {
 }
 
 .card-dash .container{
+  padding: 10px;
+  overflow: hidden;
+
+}
+.card-dash2 .container{
+  padding: 10px;
+  overflow: hidden;
+
+}
+.card-dash3 .container{
+  padding: 10px;
+  overflow: hidden;
+
+}
+.card-dash4 .container{
   padding: 10px;
   overflow: hidden;
 
