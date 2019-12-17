@@ -760,7 +760,8 @@ li.active-tab a, li.active-tab a:hover {
 }
 
 .card-dash{
-  width: 320px;
+  max-width: 100%;
+  /* width: 320px; */
   /* top: 50%;
   left: 50%; */
   background: #27814C;
@@ -824,8 +825,31 @@ li.active-tab a, li.active-tab a:hover {
   overflow: auto; 
   background-color: rgba(0,0,0,0.8);
   padding-top: 50px;
-  animation-name: show_modal;	
+  animation-name: animatetop;
   animation-duration: 0.3s;
+}
+
+.detail-user{
+  height: 100%;
+}
+
+.con-det-user{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.con-det-user h3, .con-det-user label{
+  color: #333;
+} 
+
+.con-det-user input[type=text], .con-det-user input[type=date], .con-det-user select, .con-det-user input[type=number]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .modal-content{
@@ -910,20 +934,17 @@ li.active-tab a, li.active-tab a:hover {
 	float: right;
 }
 
-@keyframes show_modal{
-	from{
-		transform: scale(0);
-		opacity: 0;
-		z-index: -1;
-	}
-	to{
-		transform: scale(1);
-		opacity: 1;
-		z-index: 2;
-	}
+@keyframes animatetop{
+  from {
+    top: -300px;
+    opacity: 0;
+}
 
-	/*from{top: -300px; opacity: 0;}
-	to{top: 0; opacity: 1;}*/
+to {
+    top: 10px;
+    opacity: 1;
+}
+
 }
 
 @keyframes hide_modal{
@@ -944,13 +965,13 @@ li.active-tab a, li.active-tab a:hover {
 
 .card-dash_text{
   color: #000000;
-  width: 320px;
+  width: 900px;
   /* top: 50%;
   left: 50%; */
   /* background: #27814C; */
   /* overflow: hidden; */
   /* box-shadow: 0px 0px 20px #000000b3; */
-  margin: -300px 450px;
+  /* margin: -300px 450px; */
   /* border-radius: 15px; */
   
 
@@ -962,6 +983,18 @@ li.active-tab a, li.active-tab a:hover {
   background-color: #E0BC24;
   border-radius: 10px;
   color: #fff;
+}
+
+.card-dashh img{
+  border-radius: 100%;
+  width: 400px;
+  height: 400px;
+}
+
+.img-card img{
+  border-radius: 100%;
+  width: 400px;
+  height: 400px;
 }
 
 

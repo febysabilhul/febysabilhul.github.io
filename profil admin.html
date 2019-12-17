@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcun icon" type="image/ico" href="favicon.ico">
     <link rel="stylesheet" href="./css/new admin.css">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
     <title>Dashboard</title>
@@ -179,52 +180,95 @@
                   <div class="dbottom">
                     <div class="tabs">
                       <ul class="tab-links">
-                        <li class="active-tab"><a href="#tab1">Profil</a></li>
+                        <!-- <li class="active-tab"><a href="#tab1">Profil</a></li> -->
                         <!-- <li><a href="#tab2">Selesai</a></li> -->
                       </ul>
+<table>
+  <tr>
 
+    <td>
+      <div class="card-dash_text"></div>
+        <!-- <table>
+            <tr>
+              <td>Nama</td>
+              <td>:</td>
+              <td id="nama_user">User</td>
+              
+            </tr>
+
+            <tr>
+              <td>Email</td>
+              <td>:</td>
+              <td id="email_user">user@email.com</td>
+            </tr>
+
+            <tr>
+              <td>Nomor HP</td>
+              <td>:</td>
+              <td id="noHP_user">08974345678</td>
+            </tr>
+
+            <tr>
+              <td>Jenis Kelamin</td>
+              <td>:</td>
+              <td id="gender_user">Laki-laki</td>
+            </tr>
+
+            <tr>
+              <td>Jenjang</td>
+              <td>:</td>
+              <td id="jenjang_user">SMP Kelas 8</td>
+            </tr>
+          </table> -->
+         
+    </div>
+
+    <div class="detail-user">
+      <section id="main-content">
+        <div class="con-det-user">
+            <h3>Informasi Pribadi</h3>
+          <form >
+            <label for="fname">Nama (Sesuai KTP)</label>
+            <input type="text" id="nama_user" name="nama" placeholder="Boleng" disabled>
+        
+            <label for="lname">Tempat Lahir</label>
+            <input type="text" id="tempat_user" name="tempat" placeholder="Banyuwangi" disabled>
+
+            <label for="lname">No. Hp</label>
+            <input type="text" id="noHP_user" name="no_hp" placeholder="082230114136" disabled>
+
+            <label for="lname">Jenis Kelamin</label>
+            <input type="text" id="gender_user" name="gender" placeholder="Laki-laki" disabled>
+
+            <label for="lname">Agama</label>
+            <input type="text" id="agama" name="agama" placeholder="Islam" disabled>
+<br>
+<br>
+            <button class="btn btn_utama" type="button" id="btn_ubah">Ubah Profil</button>
+
+                <!-- <input type="submit" value="Submit"> -->
+          </form>
+        </div>
+      </section>
+      </div>
+    </td>
+  
+    <td>
+      <div class="img-card">
+        <form id="form1" runat="server">
+        <!-- <div class="card-headerr"> -->
+          <img type='file' class="class-dashh_image" id="avatar_user" src="http://placehold.it/100x100" alt="your image">                              
+          <input type='file' id="btn_file" / style="display: none;" >
+       </form>
+                 </div>
+    </td>
+  </tr>
+</table>
                       <!-- <div class="tab-content"> -->
                         <!-- <div id="tab1" class="tab active-tab"> -->
                           <!-- <div id="tab1" class="tab active-tab"> -->
-                            <div class="card-dashh">
-                                <!-- <div class="card-headerr"> -->
-                                  <img class="class-dashh_image" id="avatar_user" src="/img/emot_file.jpg" alt="your image">                              
-                            </div>
-                                  <div class="card-dash_text">
-                                    <table>
-                                        <tr>
-                                          <td>Nama</td>
-                                          <td>:</td>
-                                          <td id="nama_user">User</td>
-                                          
-                                        </tr>
-                 
-                                        <tr>
-                                          <td>Email</td>
-                                          <td>:</td>
-                                          <td id="email_user">user@email.com</td>
-                                        </tr>
-                        
-                                        <tr>
-                                          <td>Nomor HP</td>
-                                          <td>:</td>
-                                          <td id="noHP_user">08974345678</td>
-                                        </tr>
-                        
-                                        <tr>
-                                          <td>Jenis Kelamin</td>
-                                          <td>:</td>
-                                          <td id="gender_user">Laki-laki</td>
-                                        </tr>
-                        
-                                        <tr>
-                                          <td>Jenjang</td>
-                                          <td>:</td>
-                                          <td id="jenjang_user">SMP Kelas 8</td>
-                                        </tr>
-                                      </table>
-                                      <button class="btn btn_utama" type="button" id="btn_ubah">Ubah Profil</button>
-                                </div>
+                            
+                                 
                                 </div>
                               </div>
                              
@@ -267,15 +311,15 @@
                       <td>Nama</td>
                       <td>:</td>
                       <td>
-                        <input type="text" name="nama" class="input_form" value="User">
+                        <input type="text" id="mnama" name="nama" class="input_form" value="Boleng">
                       </td>
                     </tr>
   
                     <tr>
-                      <td>Email</td>
+                      <td>Tempat</td>
                       <td>:</td>
                       <td>
-                        <input type="email" name="email" class="input_form" value="user@emails.com">
+                        <input id="mtempat" name="mtempat" class="input_form" value="Banyuwangi">
                       </td>
                     </tr>
   
@@ -283,7 +327,7 @@
                       <td>Nomor HP</td>
                       <td>:</td>
                       <td>
-                        <input type="text" name="no_hp" min="1" class="input_form" value="08974345678">
+                        <input type="text" id="mno_hp" name="no_hp" min="1" class="input_form" value="08974345678">
                       </td>
                     </tr>
   
@@ -302,23 +346,15 @@
                     </tr>
   
                     <tr>
-                      <td>Jenjang</td>
+                      <td>Agama</td>
                       <td>:</td>
                       <td>
-                        <select name="kelas">
-                          <option value="">-- Pilih Kelas --</option>
-                          <option value="SD Kelas 4">SD Kelas 4</option>
-                          <option value="SD Kelas 5">SD Kelas 5</option>
-                          <option value="SD Kelas 6">SD Kelas 6</option>
-                          <option value="SMP Kelas 7">SMP Kelas 7</option>
-                          <option selected="" value="SMP Kelas 8">SMP Kelas 8</option>
-                          <option value="SMP Kelas 9">SMP Kelas 9</option>
-                          <option value="SMA Kelas 10 IPA">SMA Kelas 10 IPA</option>
-                          <option value="SMA Kelas 10 IPS">SMA Kelas 10 IPS</option>
-                          <option value="SMA Kelas 11 IPA">SMA Kelas 11 IPA</option>
-                          <option value="SMA Kelas 11 IPS">SMA Kelas 11 IPS</option>
-                          <option value="SMA Kelas 12 IPA">SMA Kelas 12 IPA</option>
-                          <option value="SMA Kelas 12 IPS">SMA Kelas 12 IPS</option>
+                        <select name="agama">
+                          <option value="">-- Pilih Agama --</option>
+                          <option value="Islam" selected>Islam</option>
+                          <option value="Kristen">Kristen</option>
+                          <option value="Hindhu">Hindhu</option>
+                          <option value="Buddha">Budha</option>
                         </select>
                       </td>
                     </tr>
@@ -352,13 +388,28 @@
           </div>
         </div>
       </div>
-     
+
+    
+     <script>
+            $('#avatar_user').on('click',function () {
+                $("#btn_file").click();
+              
+              });
+          
+
+ 
+          $("#btn_file").uploadGambar();
+          
+    </script>
+  
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <!-- <script src="./original/dist/js/jquery-1.12.0.min.js"></script> -->
     <script src="js/main.js"></script>
     
     <script type="text/javascript">
+
+    
       $("#btn_ubah").click(function(event) {
         modalShow();
         
