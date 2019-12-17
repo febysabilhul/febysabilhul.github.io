@@ -113,19 +113,20 @@ $.fn.updateProfile = function () {
 	form.on("click", function(event) {
     	event.preventDefault();
 
-    	var nama = $("input[name='nama']").val();
-    	var no_hp = $("input[name='no_hp']").val();
-    	var email = $("input[name='email']").val();
+		var nama = $("#mnama").val();
+    	var no_hp = $("#mno_hp").val();
+    	var tempat = $("input[name='mtempat']").val();
     	var gender = $("input[name='gender']:checked").val();
-    	var kelas = $("select[name='kelas']").val();
+    	var agama = $("select[name='agama']").val();
 
     	//RegEx
 		var namaReg = /^[a-zA-Z' ]+$/; //alfabet(besar atau kecil), petik ('), dan spasi saja
 		var angka = /^\d+$/; //angka saja
 
-    	if (nama == "" || email == "" || no_hp == "" || gender == "" || kelas == "") {
+    	if (nama == "" || tempat == "" || no_hp == "" || gender == "" || agama == "") {
     		show_error("Harap lengkapi data profil");
-    		status = false;
+			status = false;
+			
     	} 
     	else if (!namaReg.test(nama)) {
     		show_error("Nama hanya boleh menggunakan huruf dan tanda petik (')");
@@ -136,11 +137,16 @@ $.fn.updateProfile = function () {
 			status = false;
 		}
     	else {
-    		$("td#nama_user").text(nama);
-    		$("td#email_user").text(email);
-    		$("td#noHP_user").text(no_hp);
-    		$("td#gender_user").text(gender);
-    		$("td#jenjang_user").text(kelas);
+    		$("input#nama_user").val(nama);
+    		$("input#tempat_user").val(tempat);
+    		$("input#noHP_user").val(no_hp);
+    		$("input#gender_user").val(gender);
+			$("input#agama").val(agama);
+			console.log(nama)
+			console.log(gender)
+			console.log(agama)
+			console.log(tempat) 
+			console.log(no_hp) 
    		// $("#id_modal").hide();
    		modalHide();
     	}
