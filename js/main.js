@@ -1,207 +1,105 @@
-// const overlay1 = document.querySelector('.overlay-1');
-// const overlay2 = document.querySelector('.overlay-2');
-// const search = document.querySelector('.search');
-// const input = document.querySelector('.input');
-// overlay1.addEventListener('click', () => {
-//   search.classList.toggle('active');
-//   if (search.classList.contains('active')) {
-//     setTimeout(() => {
-//       input.focus();
-//     }, 200)
-//   }
-// })
-// search.addEventListener('click', () => {
-//   if (search.classList.contains('active')) {
-//     setTimeout(() => {
-//       input.focus();
-//     }, 200)
-//   }
-// })
-// overlay2.addEventListener('click', (e) => {
-//   input.value = '';
-//   input.focus();
-//   search.classList.remove('searching')
-// })
-// document.body.addEventListener('click', (e) => {
-//   if (!search.contains(e.target) && input.value.length === 0) {
-//     search.classList.remove('active');
-//     search.classList.remove('searching');
-//     input.value = '';
-//   }
-// })
-// input.addEventListener('keyup', (e) => {
-//   if (e.keyCode === 13) {
-//     input.blur();
-//   }
-// })
-// input.addEventListener('input', () => {
-//   if (input.value.length > 0) {
-//     search.classList.add('searching')
-//   } else {
-//     search.classList.remove('searching')
-//   }
-// })
-// input.value = '';
-// input.blur();
+// Responsive Nav
+$(function() {
+  menu = $('nav ul');
 
-function modalShow() {
-	$("#id_modal").show();
-	$("#id_modal").css('animation-name', 'show_modal');
-	// $(".modal-content:first").css('animation-name', 'show_modal');
-}
+  $('#openup').on('click', function(e) {
+    e.preventDefault();
+    menu.slideToggle();
+  });
 
-function modalHide() {
-	// $(".modal-content:first").css('animation-name', 'hide_modal');
-	$("#id_modal").css('animation-name', 'hide_modal');
-	setTimeout(function function_name() {
-		$("#id_modal").hide();
-	}, 300);
-}
+  $(window).resize(function() {
+    var w = $(this).width();
+    if (w > 480 && menu.is(':hidden')) {
+      menu.removeAttr('style');
+    }
+  });
 
-function show_error(pesan) {
-	$("#error_modal").find('b').html(pesan);
-	$("#error_modal").show();
-	$("#error_modal").css('animation-name', 'show_modal');
+  $('nav li').on('click', function(e) {
+    var w = $(window).width();
+    if (w < 480) {
+      menu.slideToggle();
+    }
+  });
+  $('.open-menu').height($(window).height());
+});
 
-	$("#close_error_form").click(function(event) {
-		// $("#error_modal").hide();
-		$("#error_modal").css('animation-name', 'hide_modal');
-		setTimeout(function function_name() {
-			$("#error_modal").hide();
-		}, 300);
-	});
+// Smooth Scrolling
+$('.cf a').on('click', function(event) {
+  if (this.hash !== '') {
+    event.preventDefault();
 
-	window.onclick = function(event) {
-		var modal = document.getElementById('error_modal');
-		if(event.target == modal){
-			$("#error_modal").css('animation-name', 'hide_modal');
-			setTimeout(function function_name() {
-				$("#error_modal").hide();
-			}, 300);
-		}
-	};
-}
+    const hash = this.hash;
 
-//Validasi input kosong
-$.fn.validateEmpty = function () {
-	var form = this;
+    $('html, body').animate(
+      {
+        scrollTop: $(hash).offset().top
+      },
+      800,
+      function() {
+        window.location.hash = hash;
+      }
+    );
+  }
+});
 
-	form.on('submit', function (event) {
-		event.preventDefault();
-		var inputan = form.find("input,select");
-		// console.log(inputan);
-		var kosong = false;
-		inputan.each(function(index, el) {
-			if ($(el).val() == "") {
-				kosong = true;
-			}
-		});
 
-		if(kosong){
-			show_error("Harap lengkapi data isian");
-		}
-		else{
-			form.off('submit').trigger('submit');
-		}
-	});
-}
+// Dropdown
+$(document).ready(function() {
+  // on click on  setting button
+  $(".dropdown .button").click(function() {
+      var val = $(this).attr('id');
+      if (val == 1) {
+          $(".dropdown ul").hide();
+          $(this).attr('id', '0');
+      } else {
+          $(".dropdown ul").show();
+          $(this).attr('id', '1');
+      }
 
-$.fn.updateProfile = function () {
-	var form = this;
-	var status = "";
+  });
 
-	form.on("click", function(event) {
-    	event.preventDefault();
+  //Mouse click on setting button and ul list
+  $(".dropdown ul, .button").mouseup(function() {
+      return false;
+  });
 
-		var nama = $("#mnama").val();
-    	var no_hp = $("#mno_hp").val();
-    	var tempat = $("input[name='mtempat']").val();
-    	var gender = $("input[name='gender']:checked").val();
-    	var agama = $("select[name='agama']").val();
+  //Document Click
+  $(document).mouseup(function() {
+      $(".dropdown ul").hide();
+      $(".dropdown .button").attr('id', '0');
+  });
 
-    	//RegEx
-		var namaReg = /^[a-zA-Z' ]+$/; //alfabet(besar atau kecil), petik ('), dan spasi saja
-		var angka = /^\d+$/; //angka saja
 
-    	if (nama == "" || tempat == "" || no_hp == "" || gender == "" || agama == "") {
-    		show_error("Harap lengkapi data profil");
-			status = false;
-			
-    	} 
-    	else if (!namaReg.test(nama)) {
-    		show_error("Nama hanya boleh menggunakan huruf dan tanda petik (')");
-    		status = false;
-    	}
-    	else if (!angka.test(no_hp)) {
-			show_error("Nomor HP hanya boleh menggunakan angka");
-			status = false;
-		}
-    	else {
-    		$("input#nama_user").val(nama);
-    		$("input#tempat_user").val(tempat);
-    		$("input#noHP_user").val(no_hp);
-    		$("input#gender_user").val(gender);
-			$("input#agama").val(agama);
-			console.log(nama)
-			console.log(gender)
-			console.log(agama)
-			console.log(tempat) 
-			console.log(no_hp) 
-   		// $("#id_modal").hide();
-   		modalHide();
-    	}
-   });
-   $("#btn_file").change(function(event) {
-   	if (this.files && this.files[0]) {
-   	  var reader = new FileReader();
+  $('.sidebar ul li').on('click', function(){
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+  })
 
-   	  reader.onload = function(e) {
-   	    // $('#avatar_user').show();
-   	    $('#avatar_user').attr('src', e.target.result);
-   	  }
+  //Tab
+  jQuery('.tabs .tab-links a').on('click', function(e) {
+		var currentAttrValue = jQuery(this).attr('href');
 
-   	  reader.readAsDataURL(this.files[0]);
-   	}	
-   });
-}
+		// Show/Hide Tabs
+		jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
 
-//Menampilkan preview dan info gambar
-$.fn.uploadGambar = function () { //extending jquery
-	this.change(function(event) {
-    	if(this.files.length > 0){
-    		console.log(this.files[0]);
- 			var name = this.files[0].name;
- 			var size = this.files[0].size;
+		// Change/remove current tab to active
+		jQuery(this).parent('li').addClass('active-tab').siblings().removeClass('active-tab');
 
- 			var ukuran = "";
- 			if (size >= 1000000 ) { //MB
- 				size = Math.ceil(size/1000000); 
- 				ukuran = size + "MB"; 
- 			} 
- 			else if (size >= 1000) { //KB
- 				size = Math.ceil(size/1000);
- 				ukuran = size + "KB";
- 			}
- 			else if(size < 1000){
- 				ukuran = size + "Byte";
- 			}
- 			
- 			$("#file_info").html(`
- 				<p>Nama File : `+name+`</p>
- 				<p>Ukuran File : `+ukuran+`</p>
- 				`
- 			);
-    		
-    		if (this.files && this.files[0]) {
-    		  var reader = new FileReader();
+		e.preventDefault();
+  });
 
-    		  reader.onload = function(e) {
-    		    $('#avatar_img').show();
-    		    $('#avatar_img').attr('src', e.target.result);
-    		  }
+//Tab Informasi Pribadi
+$('#main-content').load('informasi_pribadi.html');
 
-    		  reader.readAsDataURL(this.files[0]);
-    		}
-    	}
-	});
-}
+$('ul#nav li a').click(function(){
+  var page = $(this).attr('href')
+  $('#main-content').load(page + '.html');
+  return false;
+})
+
+});
+
+
+
+
+

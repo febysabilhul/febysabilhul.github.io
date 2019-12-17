@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/new_user.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+    <title>Dashboard</title>
+</head>
+<body>
+        <div id="main-content">
+                <div class="con-det-user">
+                    <h3>Informasi Lain</h3>
+                  <form action="/action_page.php" class="pos-con">
+                    <div class="row">
+                        <div class="column">
+                            <label for="lname">Jenis Kelamin</label>
+                            <select id="j_kelamin" name="country">
+                                <option value="australia">Laki-laki</option>
+                                <option value="canada">Perempuan</option>
+                              </select>
+                            </div>
+                
+                    <div class="column">
+                    <label for="lname" class="telepon">Cabang</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    </div>
+
+                    <div class="column">
+                        <label for="lname" class="telepon">No. Rek</label>
+                        <input type="number" id="lname" name="lastname" placeholder="Your last name..">
+                        </div>
+
+                    <div class="column">
+                        <label for="lname" class="telepon">Atas Nama</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        </div>
+
+                    <div class="column">
+                        <label for="lname" class="telepon">No. KTP</label>
+                        <input type="number" id="lname" name="lastname" placeholder="Your last name..">
+                    </div>
+
+                    <div class="column">
+                        <label for="lname" class="telepon">No. NPWP</label>
+                        <input type="number" id="lname" name="lastname" placeholder="Your last name..">
+                    </div>
+
+                    <div class="row">
+                    <div class="column">
+                            <label for="lname" class="telepon">Upload KTP</label>
+                        <div class="up-column">
+                        <input type="file" id="real-file" hidden="hidden"/><button type="button" id="custom-button">CHOOSE A FILE</button>
+                        <span id="custom-text">No file chosen, yet.</span>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                            <label for="lname" class="telepon">Upload NPWP</label>
+                        <div class="up-column">
+                        <input type="file" id="real-file" hidden="hidden"/><button type="button" id="custom-button">CHOOSE A FILE</button>
+                        <span id="custom-text">No file chosen, yet.</span>
+                        </div>
+                    </div>
+                    </div>
+                      
+                    <input type="submit" value="Submit">
+                  </form>
+                </div>
+              </div>
+
+
+    <script>
+        //Form Upload
+const realFileBtn = document.getElementById("real-file");
+const customBtn = document.getElementById("custom-button");
+const customTxt = document.getElementById("custom-text");
+
+customBtn.addEventListener("click", function() {
+  realFileBtn.click();
+});
+
+realFileBtn.addEventListener("change", function() {
+  if (realFileBtn.value) {
+    customTxt.innerHTML = realFileBtn.value.match(
+      /[\/\\]([\w\d\s\.\-\(\)]+)$/
+    )[1];
+  } else {
+    customTxt.innerHTML = "No file chosen, yet.";
+  }
+});
+    </script>
+</body>
+</html>

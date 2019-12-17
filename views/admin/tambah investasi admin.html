@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcun icon" type="image/ico" href="favicon.ico">
+    <link rel="stylesheet" href="/css/new admin.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+    <title>Dashboard</title>
+    <style type="text/css">
+      .main-body{
+        display: table;
+        width: 100%;
+      }
+  
+      .wrapper{
+        padding: 10px;
+      }
+  
+      /*#form_wrap{
+        width: 100%;
+        margin-top: 25px;
+      }*/
+  
+      #form_wrap {
+        width: 70%;
+        margin: auto;
+        padding: 20px;
+        overflow: hidden;
+        background-color: rgba(245, 245, 245, 0.6);
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.3);
+      }
+  
+      #table_profile{
+        width: 100%;
+        margin-top: 10px;
+      }
+  
+      #table_profile td{
+        padding: 10px;
+      }
+  
+      #btn_submit{
+        float: right;
+        margin-top: 10px;
+      }
+  
+      #avatar_wrap{
+        height: 110px;
+        width: 110px;
+      }
+  
+      #avatar_wrap img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+  
+      #table-form{
+        width: 100%;
+        color: black;
+      }
+  
+      #table-form td{
+        padding: 5px;
+      }
+  
+      #table-form tr td:first-child{
+        width: 10%;
+      }
+  
+      #table-form tr td:nth-child(2){
+        padding: 0;
+        margin: 0;
+      }
+  
+      .input_form, #table-form td select{
+        padding: 5px;
+        width: 100%;
+        border: none;
+        background-color: #ddd;
+        font-size: 16px;
+      }
+  
+      .radio_label{
+        cursor: pointer;
+        margin-right: 25px;
+        background-color: red;
+      }
+  
+      .input_gender{
+        cursor: pointer;
+      }
+  
+      .input_gender input{
+        padding: 0;
+        width: initial;
+      }
+  
+      #file_info{
+        margin-left: 15px;
+        font-size: 14px;
+      }
+  
+      #upload_btn{
+        margin-top: 20px;
+      }
+  
+      @media only screen and (max-width: 800px){
+        #form_wrap{
+          width: 90%;
+        }
+      }
+  
+      @media only screen and (max-width: 600px){
+        #upload_btn{
+          margin-left: 0px;
+          margin-top: 10px;
+        }
+  
+        #file_info{
+          margin-left: 0;
+        }
+      }
+  
+    </style>
+</head>
+<body>
+  
+        <header>
+            <nav class='cf'>
+                <ul>
+                  <li class="hide-on-small">
+                    <a href="home_user.html">Agrivest</a>
+                  </li>
+                  <li>
+                    <a href='#showcase'>Home</a>
+                  </li>
+                  <li>
+                    <a href='#music'>Investasi</a>
+                  </li>
+                  <li>
+                    <a href='#video'>Artikel</a>
+                  </li>
+           
+                </ul>
+                <div  class="dropdown"> 
+                  <div class="button"><img class="right" src="/img/3.jpg" alt=""></div>            
+                     <ul>
+                    <li><a href="index.html">Sign Out</a></li>
+                     </ul> 
+                  </div> 
+                <a href='#' id='openup'>Agrivest</a>
+            </nav>
+        </header>
+        <div class="wrap-dash">
+          <div class="content">
+              <div class="sidebar">
+                  <ul>
+                    <li class="active"><a href="/views/admin/investasi_admin.html">Investasi</a></li>
+                    <li><a href="/views/admin/transaksi_admin.html">Transaksi</a></li>
+                    <li><a href="/views/admin/artikel_admin.html">Artikel</a></li>
+                    <li><a href="/views/admin/profil admin.html">Profil</a></li>
+                  </ul>
+              </div>
+  
+
+        <div class="wrap-dash">
+        <div class="content">
+           
+
+            <div class="main-dash">
+                <!-- <h2>Investasi</h2> -->
+                  <div class="dbottom">
+                    <div class="tabs">
+                      <ul class="tab-links">
+                        <!-- <li class="active-tab"><a href="#tab1">Profil</a></li> -->
+                        <!-- <li><a href="#tab2">Selesai</a></li> -->
+                      </ul>
+<table>
+  <tr>
+
+    <td>
+      <div class="card-dash_text"></div>
+
+         
+    </div>
+
+    <div class="detail-user">
+      <section id="main-content">
+        <div class="con-det-user">
+            <h3>Tambah Investasi</h3>
+          <form >
+            <label for="fname">Nama Proyek</label>
+            <input type="text" id="nama_user" name="nama" >
+        
+            <label for="lname">Harga Investasi</label>
+            <input type="text" id="tempat_user" name="tempat">
+
+            <label for="lname">Return Investasi</label>
+            <input type="text" id="noHP_user" name="no_hp" >
+
+            <label for="lname">Kuota Investasi</label>
+            <input type="text" id="gender_user" name="gender">
+
+            <label for="lname">Agama</label>
+            <input type="text" id="agama" name="agama">
+<br>
+<div class="row">
+    <div class="column">
+            <label for="lname" class="telepon">Upload Gambar Tumbnail</label>
+        <div class="up-column">
+        <input type="file" id="real-file" hidden="hidden"/><button type="button" id="custom-button">CHOOSE A FILE</button>
+        <span id="custom-text">No file chosen, yet.</span>
+        </div>
+    </div>
+    <br>
+<br>
+            <div class="row">
+                <div class="column">
+                        <label for="lname" class="telepon">Upload Detail Proyek Investasi</label>
+                    <div class="up-column">
+                    <input type="file" id="real-file" hidden="hidden"/><button type="button" id="custom-button">CHOOSE A FILE</button>
+                    <span id="custom-text">No file chosen, yet.</span>
+                    </div>
+                </div>
+<br>
+<br>
+            <button class="active-tab">Submit</button>
+
+                <!-- <input type="submit" value="Submit"> -->
+          </form>
+        </div>
+      </section>
+      </div>
+    </td>
+  
+    <td>
+      <div class="img-invest">
+        <form id="form1" runat="server">
+        <!-- <div class="card-headerr"> -->
+          <img class="class-dashh_image" id="avatar_user" src="http://placehold.it/100x100" alt="your image">                              
+         
+       </form>
+                 </div>
+    </td>
+  </tr>
+</table>
+                      <!-- <div class="tab-content"> -->
+                        <!-- <div id="tab1" class="tab active-tab"> -->
+                          <!-- <div id="tab1" class="tab active-tab"> -->
+                            
+                                 
+                                </div>
+                              </div>
+                             
+                            <!-- </div>
+                        </div>
+                      
+                    </div>
+                 
+                    </div> -->
+                  </div>
+                </div>
+            </div>
+            
+
+  
+            
+          </div>
+        </div>
+      </div>
+
+      <script src="/js/jquery-3.4.1.min.js"></script>
+      <!-- <script src="./original/dist/js/jquery-1.12.0.min.js"></script> -->
+      <script src="/js/ext_main.js"></script>
+     <!-- <script>
+            $('#avatar_user').on('click',function () {
+                $("#btn_file").click();
+                $("#btn_file").uploadGambar();
+              });
+    </script> -->
+  
+
+ 
+    
+    <script type="text/javascript">
+
+    
+      $("#btn_ubah").click(function(event) {
+        modalShow();
+        
+        $(".modal-close").click(function(event) {
+          modalHide();
+        });
+  
+        window.onclick = function(event) {
+          var modal = document.getElementById('id_modal');
+          if(event.target == modal){
+            modalHide();
+          }
+        };
+        
+      });
+      
+      $("#btn_update").updateProfile();
+      $("#btn_file").uploadGambar();
+  
+    </script>
+</body>
+</html>

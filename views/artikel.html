@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/artikel.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+    <title>Artikel</title>
+</head>
+<body>
+        <div class="header-invest">
+                <header>
+                    <nav class='cf'>
+                        <ul class='cf'>
+                          <li class="hide-on-small">
+                            <a href="#">Agrivest</a>
+                          </li>
+                          <li>
+                            <a href='index.html'>Home</a>
+                          </li>
+                          <li>
+                            <a href='investasi.html'>Investasi</a>
+                          </li>
+                          <li>
+                            <a href='artikel.html'>Artikel</a>
+                          </li>
+                          <li class="right">
+                            <a href='login.html'>Login</a>
+                          </li>
+                          <li class="right">
+                            <a href='daftar.html'>Daftar</a>
+                          </li>
+                        </ul>
+                        <a href='#' id='openup'>Agrivest</a>
+                        </nav>
+                </header>
+                <div class="section-main container">
+                    <h1>Artikel</h1>
+                </div>
+              </div>
+          
+        <div class="wrapper-article article_content" >
+
+          <!-- Content -->
+          <div id="list_artikel" page="">
+					<div id="content" class="8u skel-cell-important">
+              <div class="item">
+               z`"><img src="img/2.jpg" alt="" /></a>
+                <header>
+                  <h2>Welcome to Iridium!</h2>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis asperiores, reiciendis voluptatem unde, maiores praesentium hic ducimus excepturi repellendus ex eaque! Voluptatem autem necessitatibus fugit perferendis nostrum magnam vero?</p>
+                <a href="#" class="button_content big special">Read More</a>
+                <hr class="line">
+              </div>
+              
+              <div class="item">
+                <a href="#" class="image full"><img src="img/1.jpg" alt="" /></a>
+                <header>
+                  <h2>Welcome to Iridium!</h2>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis asperiores, reiciendis voluptatem unde, maiores praesentium hic ducimus excepturi repellendus ex eaque! Voluptatem autem necessitatibus fugit perferendis nostrum magnam vero?</p>
+                <a href="#" class="button_content big special">Read More</a>
+                <hr class="line">
+              </div>
+              
+              <div class="item">
+                <a href="#" class="image full"><img src="img/3.jpg" alt="" /></a>
+                <header>
+                  <h2>Welcome to Iridium!</h2>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis asperiores, reiciendis voluptatem unde, maiores praesentium hic ducimus excepturi repellendus ex eaque! Voluptatem autem necessitatibus fugit perferendis nostrum magnam vero?</p>
+                <a href="#" class="button_content big special">Read More</a>
+                <BR>
+             
+                  <div id="load_more">
+                      <a class="button big special" id="load_btn">More</a>
+                    </div>
+
+                <hr class="line">
+              </div>
+            </div>
+            </div>
+           
+          
+          <!-- Sidebar -->
+
+					<div id="sidebar" class="4u">
+						<section> 
+							<header>
+                  <form class="search" action="">
+                      <input type="search" placeholder="Search here..." required>
+                      <button type="submit">Search</button>
+                    </form>  
+								<h2>Pellentesque vulputate</h2>
+							</header>
+							<ul class="style">
+								<li>
+									<img src="img/5.png" alt="" />
+                  <p class="text">Nullam non wisi a sem eleifend. Donec mattis libero eget urna. Pellentesque viverra enim.</p>
+                  <a href="#" class="button big special">Read More</a>
+								</li>
+								<li>
+									<img src="img/6.png" alt="" />
+                  <p class="text">Nullam non wisi a sem eleifend. Donec mattis libero eget urna. Pellentesque viverra enim.</p>
+                  <a href="#" class="button big special">Read More</a>
+								</li>
+								<li>
+									<img src="img/7.png" alt="" />
+                  <p class="text">Nullam non wisi a sem eleifend. Donec mattis libero eget urna. Pellentesque viverra enim.</p>
+                  <a href="#" class="button big special">Read More</a>
+								</li>
+							</ul>
+						</section>
+					</div> 
+
+        </div>
+ 
+       
+        <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-cols">
+        <ul>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      Copyright &copy; 2019 Agrivest
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script type="text/javascript">
+		$("#load_btn").click(function(event) {
+			var hal = $("#list_artikel").attr('page');
+			hal = Number(hal);
+			if (hal == "") {
+				hal = 2;
+			}
+			else{
+				hal += 1;
+			}
+
+			$("#list_artikel").attr('page', hal);
+			if (hal == 2) {
+				$("#load_btn").hide();
+			}
+
+			var path = "data/artikel_"+hal+".json";
+
+			$.ajax({
+				url: path,
+				type: 'GET',
+				dataType: 'json',
+				// data: { }
+			})
+			.done(function(hasil) {
+				console.log("success");
+				var gabung = "";
+				$.each(hasil, function(index, val) {
+           gabung += ` 
+           <div id="content" class="8u skel-cell-important">
+                <div class="item">
+                <img src=`+val.gambar+` alt="" >
+                <header>
+                  <h2>`+val.judul+`</h2>
+                </header>
+                <p>`+val.paragraf+`</p>
+                <a href="#" class="button_content big special">Read More</a>
+                <hr class="line">
+              </div>
+              </div>
+					 `;
+				});
+
+				$("#list_artikel").append(gabung);
+			})
+			.fail(function() {
+				console.log("error");
+			});
+			
+		});
+
+		filter_les();
+		cariVideo();
+	</script>
+        
+
+<!-- 
+        <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+        <script src="./original/dist/js/main.js"></script>        -->
+    
+</body>
+</html>

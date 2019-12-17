@@ -760,8 +760,8 @@ li.active-tab a, li.active-tab a:hover {
 }
 
 .card-dash{
-  max-width: 100%;
-  /* width: 320px; */
+ 
+  width: 320px;
   /* top: 50%;
   left: 50%; */
   background: #27814C;
@@ -996,6 +996,13 @@ to {
   width: 400px;
   height: 400px;
 }
+
+.img-invest img{
+  border-radius: 20%;
+  width: 400px;
+  height: 400px;
+}
+
 
 
 .card-dash2_text{
