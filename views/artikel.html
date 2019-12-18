@@ -18,19 +18,19 @@
                             <a href="#">Agrivest</a>
                           </li>
                           <li>
-                            <a href='index.html'>Home</a>
+                            <a href='/views/index.html'>Home</a>
                           </li>
                           <li>
-                            <a href='investasi.html'>Investasi</a>
+                            <a href='/views/investasi.html'>Investasi</a>
                           </li>
                           <li>
-                            <a href='artikel.html'>Artikel</a>
+                            <a href='/views/artikel.html'>Artikel</a>
                           </li>
                           <li class="right">
-                            <a href='login.html'>Login</a>
+                            <a href='/views/login.html'>Login</a>
                           </li>
                           <li class="right">
-                            <a href='daftar.html'>Daftar</a>
+                            <a href='/views/daftar.html'>Daftar</a>
                           </li>
                         </ul>
                         <a href='#' id='openup'>Agrivest</a>
@@ -47,7 +47,17 @@
           <div id="list_artikel" page="">
 					<div id="content" class="8u skel-cell-important">
               <div class="item">
-               z`"><img src="img/2.jpg" alt="" /></a>
+               <img src="/img/2.jpg" alt="" /></a>
+                <header>
+                  <h2>Welcome to Iridium!</h2>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis asperiores, reiciendis voluptatem unde, maiores praesentium hic ducimus excepturi repellendus ex eaque! Voluptatem autem necessitatibus fugit perferendis nostrum magnam vero?</p>
+                <a href="/views/detail_artikel.html" class="button_content big special">Read More</a>
+                <hr class="line">
+              </div>
+              
+              <div class="item">
+                <a href="#" class="image full"><img src="/img/1.jpg" alt="" /></a>
                 <header>
                   <h2>Welcome to Iridium!</h2>
                 </header>
@@ -57,17 +67,7 @@
               </div>
               
               <div class="item">
-                <a href="#" class="image full"><img src="img/1.jpg" alt="" /></a>
-                <header>
-                  <h2>Welcome to Iridium!</h2>
-                </header>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis asperiores, reiciendis voluptatem unde, maiores praesentium hic ducimus excepturi repellendus ex eaque! Voluptatem autem necessitatibus fugit perferendis nostrum magnam vero?</p>
-                <a href="#" class="button_content big special">Read More</a>
-                <hr class="line">
-              </div>
-              
-              <div class="item">
-                <a href="#" class="image full"><img src="img/3.jpg" alt="" /></a>
+                <a href="#" class="image full"><img src="/img/3.jpg" alt="" /></a>
                 <header>
                   <h2>Welcome to Iridium!</h2>
                 </header>
@@ -98,17 +98,17 @@
 							</header>
 							<ul class="style">
 								<li>
-									<img src="img/5.png" alt="" />
+									<img src="/img/5.png" alt="" />
                   <p class="text">Nullam non wisi a sem eleifend. Donec mattis libero eget urna. Pellentesque viverra enim.</p>
                   <a href="#" class="button big special">Read More</a>
 								</li>
 								<li>
-									<img src="img/6.png" alt="" />
+									<img src="/img/6.png" alt="" />
                   <p class="text">Nullam non wisi a sem eleifend. Donec mattis libero eget urna. Pellentesque viverra enim.</p>
                   <a href="#" class="button big special">Read More</a>
 								</li>
 								<li>
-									<img src="img/7.png" alt="" />
+									<img src="/img/7.png" alt="" />
                   <p class="text">Nullam non wisi a sem eleifend. Donec mattis libero eget urna. Pellentesque viverra enim.</p>
                   <a href="#" class="button big special">Read More</a>
 								</li>
@@ -159,7 +159,7 @@
 				$("#load_btn").hide();
 			}
 
-			var path = "data/artikel_"+hal+".json";
+			var path = "/data/artikel_"+hal+".json";
 
 			$.ajax({
 				url: path,

@@ -173,7 +173,7 @@
         <div class="content">
            
 
-            <div class="main-dash">
+            <div class="main-dash dash2">
                 <!-- <h2>Investasi</h2> -->
                   <div class="dbottom">
                     <div class="tabs">
@@ -225,6 +225,15 @@
       <section id="main-content">
         <div class="con-det-user">
             <h3>Informasi Pribadi</h3>
+
+            <div class="img-card">
+              <form id="form1">
+              <!-- <div class="card-headerr"> -->
+                <img type='file' class="class-dashh_image" id="avatar_user" src="http://placehold.it/100x100" alt="your image">                              
+                <input type='file' id="btn_file" style="display: none;" >
+             </form>
+                       </div>
+
           <form >
             <label for="fname">Nama (Sesuai KTP)</label>
             <input type="text" id="nama_user" name="nama" placeholder="Boleng" disabled>
@@ -252,13 +261,7 @@
     </td>
   
     <td>
-      <div class="img-card">
-        <form id="form1" runat="server">
-        <!-- <div class="card-headerr"> -->
-          <img type='file' class="class-dashh_image" id="avatar_user" src="http://placehold.it/100x100" alt="your image">                              
-          <input type='file' id="btn_file" / style="display: none;" >
-       </form>
-                 </div>
+      
     </td>
   </tr>
 </table>
@@ -388,7 +391,7 @@
       </div>
 
     
-     <script>
+     <!-- <script>
             $('#avatar_user').on('click',function () {
                 $("#btn_file").click();
               
@@ -398,7 +401,7 @@
  
           $("#btn_file").uploadGambar();
           
-    </script>
+    </script> -->
   
 
     <script src="/js/jquery-3.4.1.min.js"></script>

@@ -563,3 +563,23 @@ nav {
 .col { float: left; margin: -60px 15px 30px 15px; }
 .col_2 { width: 320px; }
 .col_3{ width: 665px;}
+
+.form_invest{
+  display: flex;
+}
+
+.form_invest input{
+  width: 150px;
+  height: 30px;
+}
+
+.btn{
+  margin: auto 30px;
+  padding: 10px 20px;
+background:
+#E0BC24;
+text-align: center;
+border-radius: 10px;
+color: #fff;
+font-size: 15px;
+}

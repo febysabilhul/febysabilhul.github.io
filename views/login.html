@@ -15,13 +15,11 @@
     <section class="login">
 		<header>
 			<div class="wrapper">
-				<a href="#"><img src="img/logo.png" class="logo" alt="" titl=""/></a>
-				<a href="#" class="hamburger"></a>
 				<nav>
 					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Investasi</a></li>
-						<li><a href="#">Article</a></li>
+						<li><a href="/views/index.html">Home</a></li>
+						<li><a href="/views/investasi.html">Investasi</a></li>
+						<li><a href="/views/artikel.html">Article</a></li>
 					</ul>
 					<div class="btn">
 					<a href="#" class="login_btn">Login</a>
@@ -78,21 +76,19 @@
     <div class="capt_login">
         <div class="c1">
                 <h2>Pertanian Indonesia Maju</h2>
-                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing </h3>
-                <h3>Lorem ipsum, dolor sit amet consectetur  </h3>
-                <h3>Lorem ipsum, dolor sit amet  </h3>
         </div>
 
         <div class="c2">
             <div class="c2_1">
                 <h2>Masuk</h2>
-                <a href="#" class="input">First Name</a>         
+                <input type="text" class="input nama" placeholder="Name">
+                       
                 <br>
-                <a href="#"class="input">Password</a>
+                <input type="password" class="input pass" placeholder="Password">
           
                 
         
-                <a href="#"class="input3">Daftar</a>       
+                <a href="#"class="input3">Login</a>       
             </div>
 
         
@@ -132,6 +128,23 @@
 
    
     <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="/js/ext_main.js"></script>
+    <script type="text/javascript" src="/js/ext_main.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".input3").click(function(){
+                if($(".input").val()==""){
+                alert("Data tidak boleh kosong");
+            } else if($(".nama").val()=="admin" && $(".pass").val()=="admin"){
+                location.replace("/views/admin/investasi_admin.html");
+            }
+            
+            else{
+                location.replace("/views/user/dashboard_user.html");
+            }
+            })
+            
+
+        })
+    </script>
 </body>
 </html>

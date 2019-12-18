@@ -1,32 +1,4 @@
-/*
 
-    Template Author : pixelhint.com
-    Author Email    : contact@pixelhint.com
-    Template Name   : La Casa
-    
-    
-    *****************************************
-    
-    
-    - Fonts
-    - General CSS
-    - Header
-    - Hero
-    - Search
-    - Listings
-    - Footer
-    - Responsive CSS
-    
-
-*/
-
-
-
-
-
-
-
-/*  Fonts  */
 @font-face {
     font-family: 'lato-bold';
     src: url('../fonts/lato-bold.eot');
@@ -1422,7 +1394,7 @@ align-items: center;
     width: 100%;
     text-align: left;
     text-decoration: none;
-    color: #fff;
+    color: #333;
     font-family: "lato-regular", Helvetica, Arial, sans-serif;
     font-size: 16px;
     letter-spacing: 1px;
